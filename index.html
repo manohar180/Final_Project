@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Personal Library</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>📚 My Personal Library</h1>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search books by title, author, or genre...">
+        <button id="searchBtn">Search</button>
+      </div>
+    </header>
+    <section id="searchResults" class="shelf" style="display: none;">
+      <h2>📚 Search Results</h2>
+      <div class="books-grid"></div>
+    </section>
+    <main class="shelves-container">
+      <section id="currentlyReading" class="shelf">
+        <h2>📖 Currently Reading</h2>
+        <div class="shelf-stats">
+          <span class="book-count">0 books</span>
+          <span class="average-progress">0% avg. progress</span>
+        </div>
+        <div class="books-grid"></div>
+      </section>
+      <section id="readLater" class="shelf">
+        <h2>🔖 Read Later</h2>
+        <div class="shelf-stats">
+          <span class="book-count">0 books</span>
+        </div>
+        <div class="books-grid"></div>
+      </section>
+      <section id="finished" class="shelf">
+        <h2>✅ Finished Books</h2>
+        <div class="shelf-stats">
+          <span class="book-count">0 books</span>
+          <span class="completion-date">Last completed: Never</span>
+        </div>
+        <div class="books-grid"></div>
+      </section>
+    </main>
+  </div>
+  <div id="bookModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="bookDetails"></div>
+        <div class="book-reading-options">
+          <button id="readFullBookBtn" class="preview-btn">Read Full Book</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="readingModal" class="modal">
+    <div class="modal-content reading-content">
+      <span class="close">&times;</span>
+      <div id="bookReader"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
